@@ -13,10 +13,7 @@ export default function MainSection() {
     const [loading, setLoading] = useState(true);
     const dispatch = useDispatch();
     const displayType = loading === true ? 'display-flex' : 'display-none';
-
     // const scroll = loading === true ? 'no-scroll' : 'scrollable';
-
-
     var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
     function preventDefault(e) {
@@ -30,18 +27,16 @@ export default function MainSection() {
         }
     }
 
-    // modern Chrome requires { passive: false } when adding event
-    var supportsPassive = false;
+    const supportsPassive = false;
     try {
         window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-            get: function () { supportsPassive = true; } 
+            get: supportsPassive 
         }));
     } catch(e) {}
 
-    var wheelOpt = supportsPassive ? { passive: false } : false;
-    var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+    const wheelOpt = supportsPassive ? { passive: false } : false;
+    const wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
 
-    // call this to Disable
     function disableScroll() {
         window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
         window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
@@ -49,7 +44,6 @@ export default function MainSection() {
         window.addEventListener('keydown', preventDefaultForScrollKeys, false);
     }
 
-    // call this to Enable
     function enableScroll() {
         window.removeEventListener('DOMMouseScroll', preventDefault, false);
         window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
@@ -77,7 +71,7 @@ export default function MainSection() {
         fetchPhotos();
         document.getElementById('main-id').onscroll = function(e) {
             // print "false" if direction is down and "true" if up
-            console.log(this.oldScroll > this.scrollY);
+            // console.log(this.oldScroll > this.scrollY);
             if(this.oldScroll > this.scrollY) {
                 // cosnole.log(this.oldScroll)
                 document.getElementById('main-id').scrollTo( 0, 0);
@@ -86,12 +80,11 @@ export default function MainSection() {
         }
         
 
-    }, [])
+    });
 
 
     const firstEvent = (e) => {
 		var bottom = e.target.scrollHeight - e.target.scrollTop - e.target.clientHeight < 50;
-        console.log(bottom)
 		if(bottom){
 			let pg = pageNo + 1;
 			setPageNo(pg);
@@ -100,14 +93,6 @@ export default function MainSection() {
 			fetchPhotos();
 		}
 	}
-
-        
-      
-    
-
-    
-
-    
 
     return(
         <div  className="main-container">

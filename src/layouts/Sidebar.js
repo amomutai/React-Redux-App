@@ -2,7 +2,7 @@ import React from 'react'
 import Logo from '../components/Logo';
 import navConfig from '../components/navconfig';
 import NavItem from '../components/NavItem';
-import { Box, List, Link, Button, Drawer, Typography, Avatar, Stack } from '@mui/material';
+import { Box, List, Link, Button, Typography } from '@mui/material';
 
 function Sidebar() {
     return (
