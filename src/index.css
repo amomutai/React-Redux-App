@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  overflow-y: hidden;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+.App {
+  background-color: #eee;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  height: 90%;
+  width: 80%;
+  padding: 2em;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.sidebar {
+  min-width: 320px;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  /* margin-right: 1em; */
+}
+
+.menu-item{
+  width: 100% !important;
+  padding-left: 3em !important;
+  border-radius: 4% !important
+}
+.logout-btn {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: black !important;
+}
+
+.footer-sidenav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-sidenav > a {
+  text-transform: none;
+  font-size:  16px !important;
+  font-weight: 700 !important;
+}
+
+.copyright-text {
+  opacity: 0.5;
+}
+
+.top {
+  margin: auto;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 90%;
+  text-align: center;
+  padding: 0 1em 0 1em;
+}
+
+.active-link {
+  background-color:  rgba(128, 0, 0, 0.4) !important;
+  color: red !important;
+  border-radius: 10%;
+}
+
+.active-icon {
+  color: red !important;
+}
+
+
+/* Main Section */
+
+.main-container {
+  width: inherit;
+  max-height: 100%;
+  overflow: hidden;
+
+}
+
+.nav-title {
+  background-color: transparent !important;
+  color: #000 !important;
+  box-shadow: none!important;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.left {
+  margin-right: auto !important;
+}
+
+.avatar {
+  border: 4px solid rgba(128, 0, 0, 0.8);
+  border-radius: 50%;
+  font-size: 3em;
+}
+
+.main-section {
+  background-color: #fff;
+  height: 100%;
+  margin-top: 1em;
+  margin-left: .8em;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding: 2em 1em;
+}
+.no-scroll {
+  overflow: hidden;
+}
+
+.scrollable {
+  overflow: auto;
+}
+
+.main-content {
+  padding: 2em 1em;
+}
+
+.search-bar {
+  width: 300px;
+}
+.search-bar .css-cio0x1-MuiInputBase-root-MuiFilledInput-root::before, .css-cio0x1-MuiInputBase-root-MuiFilledInput-root::after {
+  border-bottom: none !important;
+}
+
+.display-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.display-none {
+  display: none;
+}
