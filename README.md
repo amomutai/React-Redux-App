@@ -1,7 +1,7 @@
 # React-Redux-App
 A reactjs application fetching data from a remote API and storing them in a redux store then rendering the view to the UI
 
-The app fetches a max of 10 data item from the API the renders them. Other data are fetched upon user scrolling to the last available render data on the screen. This is so to avoid website crash/hang/fatal-errors
+The app fetches a max of 10 data entry from the API the renders them. Other data are fetched upon user scrolling to the last available already rendered data on the screen. This is so to avoid website crash/hang/fatal-errors by fetchhing all the 5000 data entries at once.
 
 The UI:
 ![Screenshot from 2021-11-24 10-54-30](https://user-images.githubusercontent.com/33829355/143197323-c421705e-d725-475d-896d-9e811dff11ee.png)
