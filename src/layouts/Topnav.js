@@ -4,11 +4,6 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Avatar from '@mui/material/Avatar';
-import IconButton from '@mui/material/IconButton'; //user-avatar-filled-alt
-import avatarFill from '@iconify/icons-eva/person-fill';
-import { styled } from '@mui/material/styles';
-import { ListItemIcon } from '@mui/material';
 import { Icon } from '@iconify/react';
 
 export default function Topnav() {
@@ -21,7 +16,7 @@ export default function Topnav() {
             Photos
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'row' , justifyContent: 'center', alignItems: 'center'}} className="right">
-            <Icon icon="eva:person-fill"  className="avatar" iconStyles ={{width: 3, height: 3}}/> 
+            <Icon icon="eva:person-fill"  className="avatar" /> 
             <Box sx={{ display: 'flex', flexDirection: 'column', paddingLeft: '1em',justifyContent: 'center', alignItems: 'center'}} >
                 <Typography sx={{margin: '0', fontWeight: '600'}} variant="subtitle2" gutterBottom component="div">
                     Grace Njeri 

@@ -1,55 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { styled } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import Box from '@mui/material/Box';
 import Photo from '../components/Photo';
-import { useDispatch, useSelector } from 'react-redux';
-import { setPhotos } from '../redux/actions/photoActions';
+import {  useSelector } from 'react-redux';
+
 
 
 
 export default function Photos() {
     
-    // const [pageNo,setPageNo] = useState(1);
-    const photos = useSelector((state) => state.allPhotos.photos);
-    // const dispatch = useDispatch();
-
-    // const fetchPhotos = () => {
-    //     axios
-    //         .get(`https://jsonplaceholder.typicode.com/photos?_page=${pageNo}&_limit=10`)
-    //         .then((res) => {
-    //             dispatch(setPhotos(res.data));
-    //         }).catch((error) => {
-    //             console.log(error);
-    //         });
-        
-    // }
-
-
-    
-    // useEffect(() => {
-    //     fetchPhotos();
-    // }, [])
-
-    const handleChange = (event) => {
-        // setValues({ ...values, [prop]: event.target.value });
-    };
-
-    // const firstEvent = (e) => {
-    //     console.log("was called her: "+pageNo)
-	// 	//console.log(e);
-	// 	var bottom = e.target.scrollHeight - e.target.scrollTop - e.target.clientHeight < 50;
-	// 	if(bottom){
-	// 		let pg = pageNo + 1;
-	// 		setPageNo(pg);
-    //         console.log(pageNo);
-	// 		fetchPhotos();
-	// 	}
-	// }
-
-    
+    const photos = useSelector((state) => state.allPhotos.photos); 
 
     const Search = styled('div')(({ theme }) => ({
         position: 'relative',
@@ -82,7 +43,6 @@ export default function Photos() {
             transition: theme.transitions.create('width'),
             width: '100%',
             [theme.breakpoints.up('sm')]: {
-                // width: '12ch',
                 '&:focus': {
                     width: '20ch',
                 },

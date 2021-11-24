@@ -1,9 +1,6 @@
 import React from 'react';
-import { Box, List, Collapse, ListItemText, ListItemIcon, ListItemButton } from '@mui/material';
-import { Icon } from '@iconify/react';
+import { ListItemText, ListItemIcon, ListItemButton } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import arrowIosForwardFill from '@iconify/icons-eva/arrow-ios-forward-fill';
-import arrowIosDownwardFill from '@iconify/icons-eva/arrow-ios-downward-fill';
 
 const ListItemStyle = styled((props) => <ListItemButton disableGutters {...props} />)(
     ({ theme }) => ({
@@ -38,15 +35,14 @@ const ListItemIconStyle = styled(ListItemIcon)({
 });
 
 export default function NavItem({ item}){
-    const [open, setOpen] = React.useState();
     const [active, setActive] = React.useState({
         item
     });
-    const { title, path, icon , info, children, isActive } = item;
+    if(active){}
+    const { title, icon , info, isActive } = item;
 
     const handleOpen = (event) => {
         // console.log(event) Change the active link by removing the specifed css
-        setOpen((prev) => !prev);
         setActive((prev) => !prev);
     };
 
@@ -54,7 +50,7 @@ export default function NavItem({ item}){
     return (
         <ListItemStyle
             onClick={handleOpen}
-            className = {isActive  === true ? "menu-item active-link": "menu-item"}
+            className = {isActive  === true ? "menu-item active-link": "menu-item" }
         >
             <ListItemIconStyle className = {isActive  === true ? "active-icon": ""}>{icon && icon}</ListItemIconStyle>
             <ListItemText disableTypography primary={title} />
