@@ -12,6 +12,8 @@ export default function Photos() {
     
     const photos = useSelector((state) => state.allPhotos.photos); 
 
+    console.log(photos)
+
     const Search = styled('div')(({ theme }) => ({
         position: 'relative',
         borderRadius: "5px",
@@ -66,6 +68,7 @@ export default function Photos() {
                  
             
             {
+
                 photos.map((photo) => (
                     <Box key={photo.id} sx={{ display: 'flex', flexDirection: 'column' , marginTop: '0.5em'}}>
                         <Photo photo={photo} />
