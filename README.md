@@ -8,4 +8,4 @@ The UI:
 ![Screenshot from 2021-11-24 10-54-51](https://user-images.githubusercontent.com/33829355/143197335-beee11a2-0856-45b8-b959-e7c0bd900c35.png)
 
 DISCLAIMER:
-I do not own any image resources here.
+I do not claim ownernship any image resources here.
