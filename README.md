@@ -1,5 +1,5 @@
 # React-Redux-App
-A reactjs application fetching data from a remote API and storing them in a redux store then rendering the view to the UI
+A reactjs application fetching data from a remote API and storing them in a redux store then rendering the view to the UI.  To deploy the website locally, clone the repo and run npm install.
 
 The app fetches a max of 10 data item from the API the renders them. Other data are fetched upon user scrolling to the last available render data on the screen. This is so to avoid website crash/hang/fatal-errors
 
